@@ -1,3 +1,17 @@
+:root {
+  --corBack: #e5e5e5;
+  --corPlatinum: #e5e5e5;
+  --corRaisinBlack: #212738;
+  --corLapisLazuli: #26619c;
+  --corPoppy: #DA2C38;
+  --corDarkSpringGreen: #226F54;
+  --corTimberwolf: #DBD4D3;
+}
+
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +24,231 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.homeContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.customNav a {
+  padding-left: 30px;
+}
+
+.customDropDown {
+  transition: all 0.3s;
+  color: grey;
+}
+
+.customDropDown div {
+  margin-top: 0px;
+  padding-top: 0px;
+  border: none;
+  color: grey;
+  background-color: transparent;
+  transition: all 0.3s;
+  /* Remove a borda */
+}
+
+.customDropDown:hover {
+    color: black;
+    transition: all 0.3s;
+    margin-left: 5px;
+}
+
+.dropdown-menu > a {
+  display: flex;
+  flex-direction: column;
+}
+
+a.navLinkItem {
+  transition: all 0.3s;
+}
+
+a.navLinkItem:hover {
+  color:black;
+  font-weight: bolder;
+  transition: all 0.3s;
+  margin-left: 5px;
+}
+
+footer {
+  margin-top: auto;
+  background-color: var(--corRaisinBlack);
+}
+
+footer>div>p {
+  color: var(--corBack);
+  font-size: 13px;
+}
+
+footer>div>button {
+  background-image: url(assets/img/info-svgrepo-com.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+}
+
+footer>a {
+  background-image: url(assets/img/trouverLogoPlatinum.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 20px;
+}
+
+.footerModal .modal-header {
+  background-color: var(--corRaisinBlack);
+  color: var(--corPlatinum);
+}
+
+.footerModal .btn-close {
+  filter: invert(100%);
+}
+
+a.card  {
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .6;
+  transition: all 0.5s;
+  color: black;
+  width: 15rem;
+  height: 260px;
+}
+
+a.card:hover {
+  transform: scale(1.03);
+  opacity: 1;
+  color: black;
+}
+
+a.card-img-top {
+  height: 120px;
+}
+
+a.cardBI {
+  background-image: url(assets/img/chart-colum-svgrepo-com.svg);
+  height: 260px;
+}
+
+a.cardForm {
+  background-image: url(assets/img/checklist-svgrepo-com.svg);
+  height: 240px;
+}
+
+a.cardRisco {
+  background-image: url(assets/img/matrix-svgrepo-com.svg);
+  height: 240px;
+}
+
+a.cardBI:hover {
+  background-image: url(assets/img/chart-colum-svgrepo-comHOVER.svg);
+}
+
+a.cardForm:hover {
+  background-image: url(assets/img/checklist-svgrepo-comHOVER.svg);
+}
+
+a.cardRisco:hover {
+  background-image: url(assets/img/matrix-svgrepo-comHOVER.svg);
+}
+
+p.titleBI {
+  position: absolute;
+  font-weight: bold;
+  top: 250px;
+  left: 4.0rem;
+}
+
+p.titleBInot {
+  position: absolute;
+  font-weight: bold;
+  top: 275px;
+  left: 4.9rem;
+  transition: all .3s;
+}
+
+p.titleForm {
+  position: absolute;
+  font-weight: bold;
+  top: 240px;
+  left: 1rem;
+}
+
+p.titleRisco {
+  position: absolute;
+  font-weight: bold;
+  top: 240px;
+  left: 3.5rem;
+}
+
+@media screen and (max-width: 770px) {
+
+  main.homeMain {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+  }
+}
+
+div.cardON {
+  transition: all 0.5s;
+  border: 1px solid;
+}
+
+div.cardON:hover {
+  transform: scale(1.03);
+  border: 1px solid;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+div.forms, div.forms:hover {
+  border-color: var(--corDarkSpringGreen);
+}
+
+div.matriz, div.matriz:hover {
+  border-color: var(--corPoppy);
+}
+
+div.forms>div>button,
+div.forms>div>button:hover {
+  border-color: var(--corDarkSpringGreen);
+  background-color: var(--corDarkSpringGreen);
+}
+
+div.matriz>div>button,
+div.matriz>div>button:hover {
+  border-color: var(--corPoppy);
+  background-color: var(--corPoppy);
+}
+
+div.forms>div>button, div.matriz>div>button {
+  color: whitesmoke;
+  transition: all 0.5s;
+}
+
+div.forms>div>button:hover, div.matriz>div>button:hover {
+  transform: scale(1.03);
+}
+
+div.cardOFF, div.cardOFF:hover {
+  opacity: 45%;
+  border-color: gray;
+}
+
+div.cardOFF>div>button, 
+div.cardOFF>div>button:hover,
+div.cardOFF>div>button:active,
+div.cardOFF>div>button:focus,
+div.cardOFF>div>button:disabled
+ {
+  border-color: gray;
+  background-color: gray;
+  
 }
