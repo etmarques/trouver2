@@ -15,7 +15,7 @@ export const msalConfig = {
     auth: {
         clientId: "b2b716af-2f6a-4e99-a42e-5b7f3d1103e0",
         authority: "https://login.microsoftonline.com/4d79d37a-1e4e-4a39-9fde-f1631cb607d4",
-        redirectUri: "http://localhost:3000",
+        redirectUri: "https://trouver2.onrender.com/",
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
